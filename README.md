@@ -1,1 +1,0 @@
-# guoruiting2016.github.com

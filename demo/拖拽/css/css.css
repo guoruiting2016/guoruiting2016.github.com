@@ -1,0 +1,7 @@
+*{margin: 0;padding: 0;list-style: none;}
+	body{overflow:hidden;}
+	input{position: absolute;left: 300px;top:300px;}
+	#oUl{width: 642px;margin:0 auto;_position: relative;}
+	#oUl li{width:200px;height: 200px;float: left;margin:5px;border:2px solid #000;}
+	#oUl li img{width: 200px;height: 200px;}
+	#oUl li.ac{width: 200px;height: 200px;border:2px dashed red;float: left;margin:5px;}

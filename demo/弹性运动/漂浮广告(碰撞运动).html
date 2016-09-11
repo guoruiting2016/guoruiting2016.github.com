@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+	*{margin: 0;padding: 0;}
+	body{background:url(img/94.jpg) no-repeat;background-size:100%;}
+	#div1{width: 200px;height: 200px;position: absolute;left:0;top:0;border-radius: 50%;}
+	</style>
+	<script type="text/javascript">
+	window.onload=function(){
+		var oDiv=document.getElementById('div1');
+		var speedX=6;
+		var speedY=8;
+		setInterval(function(){
+			var l=oDiv.offsetLeft+speedX;
+			var t=oDiv.offsetTop+speedY;
+			var clientH=document.documentElement.clientHeight-oDiv.offsetHeight;
+			var clientW=document.documentElement.clientWidth-oDiv.offsetWidth;
+			if(t>=clientH){
+				t=clientH;
+				speedY*=-1;
+			}
+			if(t<=0){
+				t=0;
+				speedY*=-1;
+			}
+			if(l>=clientW){
+				l=clientW;
+				speedX*=-1;
+			}
+			if(l<=0){
+				l=0;
+				speedX*=-1;
+			}
+			oDiv.style.left=l+'px';
+			oDiv.style.top=t+'px';
+			var a=parseInt(Math.random()*256);
+			var b=parseInt(Math.random()*256);
+			var c=parseInt(Math.random()*256);
+			oDiv.style.background='rgb('+a+','+b+','+c+')';
+		},30)
+
+	}
+	</script>
+</head>
+<body>
+	<div id="div1" style="background:#ccc;">
+	</div>
+</body>
+</html>

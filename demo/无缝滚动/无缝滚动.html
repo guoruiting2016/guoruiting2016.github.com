@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+	ul,li,body{margin: 0;padding: 0;;list-style: none;background: #000;}
+	#box{margin:100px auto;border:1px solid #000;width: 840px;height: 210px;position: relative;overflow: hidden;}
+	#box ul{width: 840px;height: 210px;position: absolute;left: 0;top:0;}
+	#box ul li{width: 200px;height: 200px;border:5px solid #fff;float: left;}
+	#box ul li img{width: 200px;height: 200px;}
+	#box a{opacity: 0;filter:alpha(opacity=0);display: block;width: 420px;height: 210px;float: left;position: absolute;background:skyblue;z-index:2;}
+	#box a:nth-child(2){right: 0;background:silver;}
+	</style>
+	<script>
+	window.onload=function(){
+		var oBox=document.getElementById('box');
+		var oLeft=oBox.children[0];
+		var oRight=oBox.children[1];
+		var oUl=oBox.getElementsByTagName('ul')[0];
+		var timer=null;
+		var l=0;
+		oUl.innerHTML+=oUl.innerHTML;
+		var aLi=oUl.children;
+		oUl.style.width=aLi.length*aLi[0].offsetWidth+'px';
+		var oW=oUl.offsetWidth/2;
+		function toLeft(){
+			clearInterval(timer);
+			timer=setInterval(function(){
+				l-=4;
+				if(l<0){
+					l%=oW;
+				}else{
+					l=(l%oW-oW)%oW;
+				}
+				oUl.style.left=l+'px';
+			},30)
+		}
+		function toRight(){
+			clearInterval(timer);
+			timer=setInterval(function(){
+				l+=4;
+				if(l<0){
+					l%=oW;
+				}else{
+					l=(l%oW-oW)%oW;
+				}
+				oUl.style.left=l+'px';
+			},30)
+		}
+		toLeft();
+		oLeft.onmouseover=function(){
+			toLeft();
+		}
+		oRight.onmouseover=function(){
+			toRight();
+		}
+	}
+	</script>
+</head>
+<body>
+	<div id="box">
+		<a href="javascript:;"></a>
+		<a href="javascript:;"></a>
+		<ul>
+			<li><img src="cat/1.jpg" alt=""></li>
+			<li><img src="cat/2.jpg" alt=""></li>
+			<li><img src="cat/3.jpg" alt=""></li>
+			<li><img src="cat/4.jpg" alt=""></li>
+		</ul>
+	</div>
+</body>
+</html>

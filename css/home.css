@@ -1,0 +1,422 @@
+.warp{
+    width: 1200px;
+    margin: auto;
+    /*background: rgba(255,255,255,.5);*/
+    overflow: hidden;
+}
+
+@font-face {
+    font-family: SketchRockwell;
+    src: url(../frame/方正剪纸简体.ttf);
+}
+.grzl{
+    width: 100%;
+    height: 400px;
+    padding: 20px;
+    box-sizing: border-box;
+    background:;
+}
+.grzl .img img{position: absolute;top:60px;left:140px;}
+#contro{
+    width: 400px;
+    height: 30px;
+    margin:100px auto;
+    position:absolute;
+    background:#000;
+    right:120px;
+    top:-40px;
+}
+#contro li{
+    width: 80px;
+    height: 30px;
+    float: left;
+    line-height: 30px;
+    text-align: center;
+    z-index: 2;
+    position:relative;
+    list-style: none;
+    font-family: "微软雅黑";
+    font-size: 12px;
+}
+#contro li a{
+    text-decoration: none;
+    color:#fff;
+}
+#contro li.fly{
+    width: 80px;
+    height: 30px;
+    background:skyblue;
+    position: absolute;
+    left:0;
+    top:0;
+    transform:rotate(10deg);
+    box-shadow: 1px 2px 2px #000;
+    z-index: 1;
+}
+.log{ width:200px; height:200px; background:#fff; position:absolute; top:50%; left:50%; margin-left:-150px; margin-top:-150px; transform:scale(4); opacity:0; transition:0.3s all ease;}
+.log span{width:20px;height: 20px;text-align: center;line-height: 20px;position:absolute; right:0; top:0;cursor:pointer;border:1px solid #000;background:skyblue;}
+input{border:none;outline: none;}
+.top{position: fixed;right: 10px;bottom:20px;width: 80px;height: 30px;background:#ccc;display:none;font-size: 12px;font-family: "微软雅黑";text-align: center;}
+.top:hover{background:skyblue;}
+.photo{
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    left: 0;
+    top: 20px;
+}
+
+#div{
+    width: 280px;
+    height: 280px;
+    border-radius: 50%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: url(../img/yinyue.png) no-repeat;
+    background-size: 100% 100%;
+}
+.yinyue{
+    animation:3s yinyue linear infinite;
+}
+@keyframes yinyue {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+.show{
+    width: 160px;
+    height: 100px;
+    background: url(../img/yinyue1.png) no-repeat;
+    background-size: 100% 100%;
+    position: absolute;
+    left: 35px;
+    top: 163px;
+    display: none;
+}
+.apply{
+    position: absolute;
+    right: 16px;
+    top: 0px;
+    width: 100px;
+    height: 240px;
+    background: url(../img/appy.png) no-repeat;
+    background-size: 100% 100%;
+    transform-origin: top right;
+    transition: .5s;
+    transform: rotate(-30deg);
+}
+.apply1{
+    transform: rotate(-30deg);
+}
+.audio{
+    position: absolute;
+    z-index: 99;
+    bottom: -4px;
+}
+
+.js{
+    width: 600px;
+    height: 300px;
+    position: relative;
+    overflow: hidden;
+}
+.js h4{
+    font-size: 40px;
+    text-align: center;
+    line-height: 60px;
+    color: #fff;
+}
+.js p{
+    line-height: 30px;
+    font-size: 24px;
+    color: #00bcd4;
+    font-family: 'SketchRockwell';
+    position: absolute;
+    left: 20px;
+    top:-30px;
+}
+.jn,.zpzs{
+    width: 100%;
+    padding: 10px 50px;
+    box-sizing: border-box;
+}
+.jn h4,.project h4,.zpzs h4{
+    font-size: 50px;
+    margin-bottom: 20px;
+    width: 100%;
+    color: #fff;
+    font-family: SketchRockwell;
+}
+.zwarp{
+    width: 100%;
+    position: relative;
+    padding: 20px 0;
+    height: 800px;
+    transition: .5s all cubic-bezier(0, 0, 0.2, 1);
+    transform-style: preserve-3d;
+    transform: perspective(800px) rotateX(-18deg) rotateY(0deg) translateZ(0px);
+}
+.zwarp li{
+    width: 150px;
+    height: 300px;
+    position: absolute;
+    border-radius: 30px;
+    text-align: center;
+    line-height: 300px;
+    left: 50%;
+    top: 50%;
+    margin: -200px 0 0 -75px;
+    transform-style: preserve-3d;
+    transform: rotateY(0deg)  translateZ(-400px);
+}
+.zwarp a:nth-child(1) li{
+    background: url(../img/1.jpg) no-repeat;
+    background-size: 100% 100%;
+}
+.zwarp a:nth-child(2) li{
+    background: url(../img/2.jpg) no-repeat;
+    background-size: 100% 100%;
+}
+.zwarp a:nth-child(3) li{
+    background: url(../img/3.jpg) no-repeat;
+    background-size: 100% 100%;
+}
+.zwarp a:nth-child(4) li{
+    background: url(../img/4.jpg) no-repeat;
+    background-size: 100% 100%;
+}
+.zwarp a:nth-child(5) li{
+    background: url(../img/5.jpg) no-repeat;
+    background-size: 100% 100%;
+}
+.zwarp a:nth-child(6) li{
+    background: url(../img/6.jpg) no-repeat;
+    background-size: 100% 100%;
+}
+.zwarp a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 30px;
+}
+
+.jn_warp{
+    width: 100%;
+    height: 300px;
+    position: relative;
+}
+.jn_warp li{
+    width: 25%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    overflow: hidden;
+}
+.jn_warp li:nth-child(1){
+    background: url(../img/h5.jpg) no-repeat;
+    background-size: 100% 100%;
+}
+.jn_warp li:nth-child(2){
+    background: url(../img/js1.png) no-repeat;
+    background-size: 100% 100%;
+}
+.jn_warp li:nth-child(3){
+    background: url(../img/jq.png) no-repeat;
+    background-size: 100% 100%;
+}
+.jn_warp li span{
+    width: 100%;
+    height: 100%;
+    background: rgba(7, 249, 213, 0.8);
+    position: absolute;
+    left: 0;
+    top: -300px;
+    box-sizing: border-box;
+    padding: 10px;
+    color:#000;
+    font-size: 20px;
+    line-height: 30px;
+    font-family: "微软雅黑";
+}
+.project{
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+}
+.project_left{
+    flex:1;
+    margin:10px 20px;
+}
+.project_3d{
+    width: 100%;
+    height: 200px;
+    transform-style: preserve-3d;
+    transform-origin: bottom center;
+    transition: .5s all ease;
+    position: relative;
+}
+.projectCover{
+    width: 100%;
+    height: 200px;
+    background: red;
+    position: absolute;
+    transform-style: preserve-3d;
+    left: 0;
+    top: 0;
+}
+.projectContent{
+    width: 100%;
+    height: 200px;
+    background:rgba(7, 249, 213, 0.8);
+    transform-style: preserve-3d;
+    transform-origin: bottom center ;
+    transform:perspective(800px) rotateX(90deg) translateZ(200px);
+    position: absolute;
+    left: 0;
+    top: 0;
+    box-sizing: border-box;
+    padding: 20px;
+    line-height: 40px;
+}
+.project_left:hover .project_3d{
+    transform: rotateX(-90deg) ;
+}
+.projectCover h5{
+    text-align: center;
+    line-height: 50px;
+    font-size: 26px;
+}
+.projectCover p{
+    padding: 0 40px;
+    line-height: 30px;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+/*工作经验*/
+.gzcd{
+    height: 400px;
+    width:90%;
+    position: relative;
+    margin: 50px auto;
+}
+.cd-left{
+    height:400px;
+    width:400px;
+    position: absolute;
+    left: 50%;
+    margin-left: -200px;
+    background:#fff url(../img/daan.jpg) no-repeat center center;
+    background-size: 66%;
+    overflow: hidden;
+}
+.cd-top{
+    background: rgba(229,229,240,1);
+    height:200px;
+    width:400px;
+    -webkit-transition: all .6s;
+    -moz-transition: all .6s;
+    -ms-transition: all .6s;
+    -o-transition: all .6s;
+    transition: all .6s;
+    text-align: center;
+    overflow: hidden;
+    margin-top: -200px;
+}
+.cd-top h3{
+    font-size: 24px;
+    margin-top: 80px;
+    color: #201FCF;
+}
+.cd-top p{
+    margin: auto;
+    width:60%;
+    font-size: 20px;
+    color: #201FCF;
+}
+.cd-bottom{
+    background:rgba(229,229,240,1);
+    height:200px;
+    width:400px;
+    text-align: center;
+    margin-top: 400px;
+    -webkit-transition: all .6s;
+    -moz-transition: all .6s;
+    -ms-transition: all .6s;
+    -o-transition: all .6s;
+    transition: all .6s;
+}
+.cd-bottom p{
+    margin: auto;
+    width:60%;
+    font-size: 20px;
+    color: #201FCF;
+}
+.span{
+    position: absolute;
+    display: block;
+    height: 750px;
+    width:750px;
+    left:600px;
+    top:400px;
+    background: rgba(119, 238, 241, 0.3);
+    -webkit-transform-origin: 0 0;
+    -moz-transform-origin: 0 0;
+    -ms-transform-origin: 0 0;
+    -o-transform-origin: 0 0;
+    transform-origin: 0 0;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+    -webkit-transition: all .6s;
+    -moz-transition: all .6s;
+    -ms-transition: all .6s;
+    -o-transition: all .6s;
+    transition: all .6s;
+}
+.cd-left:hover #span{
+    top:-300px;
+    left:300px;
+}
+.cd-left:hover .cd-top{
+    margin-top: 0;
+}
+.cd-left:hover .cd-bottom{
+    margin-top: 0;
+}
+.cd-right:hover #span1{
+    top:-300px;
+    left:300px;
+}
+.cd-right:hover .cdleft{
+    margin-left: 0;
+}
+.cd-right:hover .cdright{
+    margin-right: 0;
+}
+
+.p1{
+    animation: p1 .5s forwards;
+}
+.p2{
+    animation: p2 .5s .5s forwards;
+}
+.p3{
+    animation: p3 .5s 1s forwards;
+}
+.p4{
+    animation: p4 .5s 1.5s forwards;
+}
+.p5{
+    animation: p5 .5s 2s forwards;
+}
+@keyframes p1 {0%{top:-30px;}100%{top:60px;}}
+@keyframes p2 {0%{top:-30px;}100%{top:100px;}}
+@keyframes p3 {0%{top:-30px;}100%{top:140px;}}
+@keyframes p4 {0%{top:-30px;}100%{top:180px;}}
+@keyframes p5 {0%{top:-30px;}100%{top:220px;}}
